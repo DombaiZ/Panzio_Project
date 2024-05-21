@@ -1,0 +1,28 @@
+﻿<Window x:Class="Panzio.SzobaFoglalas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Panzio"
+        mc:Ignorable="d"
+        Title="SzobaFoglalas" Height="450" Width="800">
+    <StackPanel>
+        <StackPanel.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF113A22" Offset="0"/>
+                <GradientStop Color="#FF54DE91" Offset="1"/>
+                <GradientStop Color="#FE399662" Offset="0.74"/>
+            </LinearGradientBrush>
+        </StackPanel.Background>
+        <Label Content="Szobaszám:" FontSize="20"/>
+        <ComboBox Name="Cbx_Szobaszam" Margin="10" FontSize="20"/>
+        <Label Content="Férőhelyek száma:" FontSize="20"/>
+        <ComboBox Name="Cbx_Ferohelyek" Margin="10" FontSize="20"/>
+        <Label Content="Ár:" FontSize="20"/>
+        <TextBox Name="Tbx_Ar" Margin="10" FontSize="20"/>
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button Name="Btn_Mentes" Content="Foglalas" Width="150" Height="30" FontSize="20" Background="#32CD32" Margin="10"/>
+            <Button Name="Btn_Vissza" Content="Vissza" Width="150" Height="30" FontSize="20" Background="#32CD32"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
