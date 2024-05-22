@@ -5,30 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Panzio"
         mc:Ignorable="d"
-        Title="MainWindow" Height="375" Width="450">
+        Title="MainWindow" Height="400" Width="700">
     <StackPanel>
         <StackPanel.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF380000" Offset="0"/>
-                <GradientStop Color="#FF7F2A4E" Offset="1"/>
-                <GradientStop Color="#FFFF4600" Offset="0.53"/>
-            </LinearGradientBrush>
+            <ImageBrush ImageSource="C:\Users\Zoli\Desktop\asztali_alk\Panzio\Panzio\bin\Debug\background.jpg"/>
         </StackPanel.Background>
-        <Menu>
-            <MenuItem Header="Szobafoglalások listája"/>
+        <Menu Background="Black" Foreground="White" Height="25" FontSize="15">
+            <MenuItem Header="Szobafoglalás" Name="MI_Szobafoglalas" Click="MI_Szobafoglalas_Click"/>
+            <MenuItem Header="Ügyféladatok megadása" Name="MI_Ugyfeladatok" Click="MI_Ugyfeladatok_Click"/>
+            <MenuItem Header="Szobafoglalások listája" Name="MI_Lista" Click="MI_Lista_Click"/>
         </Menu>
-        <Label Content="Ügyfél Azonosító:" Foreground="White"/>
-        <TextBox Name="Tbx_UgyfelID" Margin="10"/>
-        <Label Content="Teljes neve:" Foreground="White"/>
-        <TextBox Name="Tbx_UgyfelNev" Margin="10"/>
-        <Label Content="Születési év:" Foreground="White"/>
-        <DatePicker Name="Dpr_szulEv" Margin="10"/>
-        <Label Content="Email cím:" Foreground="White"/>
-        <TextBox Name="Tbx_Email" Margin="10"/>
-        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-            <Label Content="VIP Ügyfél:" Foreground="White"/>
-            <CheckBox Name="Cbx_" Margin="5"/>
-        </StackPanel>
-        <Button Name="Btn_Register" Content="Továbblépés a foglaláshoz" Width="200" Height="30" FontFamily="Arial" FontSize="16" Click="Btn_Register_Click" Background="#953553" Foreground="White"/>
     </StackPanel>
 </Window>

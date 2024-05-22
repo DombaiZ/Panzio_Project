@@ -22,7 +22,20 @@ namespace Panzio
         public SzobaFoglalas()
         {
             InitializeComponent();
-                        
+            for (int i = 1; i < 7; i++)
+            {
+                Cbx_Szobaszam.ItemsSource += i.ToString();
+            }
+            for (int i = 2; i < 5; i++)
+            {
+                Cbx_Ferohelyek.ItemsSource += i.ToString();
+            }
+
+        }
+
+        private void Btn_Vissza_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

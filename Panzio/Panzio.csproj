@@ -56,10 +56,20 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Foglalas.cs" />
-    <Compile Include="Szallas.cs" />
+    <Compile Include="FoglalasokLista.xaml.cs">
+      <DependentUpon>FoglalasokLista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ugyfel.cs" />
     <Compile Include="SzobaFoglalas.xaml.cs">
       <DependentUpon>SzobaFoglalas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UgyfelAdatok.xaml.cs">
+      <DependentUpon>UgyfelAdatok.xaml</DependentUpon>
+    </Compile>
+    <Page Include="FoglalasokLista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -73,6 +83,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="SzobaFoglalas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UgyfelAdatok.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

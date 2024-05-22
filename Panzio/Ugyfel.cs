@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Panzio
 {
-    internal class Szallas
+    public class Ugyfel
     {
-        int ugyfelID;
+        string ugyfelID;
         string ugyfelNev;
-        TimeSpan szulEv;
+        DateTime szulEv;
         string email;
         bool ugyfelVIP;
 
-        public Szallas(int ugyfelID, string ugyfelNev, TimeSpan szulEv, string email, bool ugyfelVIP)
+        public Ugyfel(string ugyfelID, string ugyfelNev, DateTime szulEv, string email, bool ugyfelVIP)
         {
             this.UgyfelID = ugyfelID;
             this.UgyfelNev = ugyfelNev;
@@ -25,12 +25,12 @@ namespace Panzio
 
         public override string ToString()
         {
-            return $"{ugyfelID};{ugyfelNev},{szulEv},{email},{ugyfelVIP}\n";
+            return $"{ugyfelID};{ugyfelNev},{szulEv.Year},{szulEv.Month},{szulEv.Day},{email},{ugyfelVIP}\n";
         }
 
-        public int UgyfelID { get => ugyfelID; set => ugyfelID = value; }
+        public string UgyfelID { get => ugyfelID; set => ugyfelID = value; }
         public string UgyfelNev { get => ugyfelNev; set => ugyfelNev = value; }
-        public TimeSpan SzulEv { get => szulEv; set => szulEv = value; }
+        public DateTime SzulEv { get => szulEv; set => szulEv = value; }
         public string Email { get => email; set => email = value; }
         public bool UgyfelVIP { get => ugyfelVIP; set => ugyfelVIP = value; }
     }

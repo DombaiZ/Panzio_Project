@@ -20,17 +20,28 @@ namespace Panzio
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Szallas> szallasok = new List<Szallas>();
         public MainWindow()
         {
             InitializeComponent();
 
         }
 
-        private void Btn_Register_Click(object sender, RoutedEventArgs e)
+        private void MI_Szobafoglalas_Click(object sender, RoutedEventArgs e)
         {
             SzobaFoglalas szobafoglalasAblak = new SzobaFoglalas();
             szobafoglalasAblak.ShowDialog();
+        }
+
+        private void MI_Ugyfeladatok_Click(object sender, RoutedEventArgs e)
+        {
+            UgyfelAdatok ugyfelAdatok = new UgyfelAdatok();
+            ugyfelAdatok.ShowDialog();
+        }
+
+        private void MI_Lista_Click(object sender, RoutedEventArgs e)
+        {
+            FoglalasokLista foglalasoklista = new FoglalasokLista();
+            foglalasoklista.ShowDialog();
         }
     }
 }

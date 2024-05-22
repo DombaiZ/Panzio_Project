@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Panzio"
         mc:Ignorable="d"
         Title="SzobaFoglalas" Height="450" Width="800">
+    
     <StackPanel>
         <StackPanel.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -22,7 +23,7 @@
         <TextBox Name="Tbx_Ar" Margin="10" FontSize="20"/>
         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
             <Button Name="Btn_Mentes" Content="Foglalas" Width="150" Height="30" FontSize="20" Background="#32CD32" Margin="10"/>
-            <Button Name="Btn_Vissza" Content="Vissza" Width="150" Height="30" FontSize="20" Background="#32CD32"/>
+            <Button Name="Btn_Vissza" Content="Vissza" Width="150" Height="30" FontSize="20" Background="#32CD32" Click="Btn_Vissza_Click"/>
         </StackPanel>
     </StackPanel>
 </Window>
