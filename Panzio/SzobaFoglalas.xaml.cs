@@ -22,15 +22,26 @@ namespace Panzio
         public SzobaFoglalas()
         {
             InitializeComponent();
-            for (int i = 1; i < 7; i++)
-            {
-                Cbx_Szobaszam.ItemsSource += i.ToString();
-            }
-            for (int i = 2; i < 5; i++)
-            {
-                Cbx_Ferohelyek.ItemsSource += i.ToString();
-            }
+            Cbx_Szobaszam.ItemsSource = Adatforras.Szobak;
+            Cbx_Szobaszam.DisplayMemberPath = "Szobaszam";
+            Cbx_Ugyfel.ItemsSource = Adatforras.Ugyfelek;
+            Cbx_Ugyfel.DisplayMemberPath = "Nev";
+            Btn_Foglalas.Click += Btn_Foglalas_Click;
+        }
 
+        private void Btn_Foglalas_Click(object sender, RoutedEventArgs e)
+        {
+            Szoba szoba = (Szoba)Cbx_Szobaszam.SelectedItem;
+            Ugyfel ugyfel = (Ugyfel)Cbx_Ugyfel.SelectedItem;
+            DateTime erkezesDatum = Dp_ErkezesDatum.SelectedDate.Value;
+            DateTime tavozasDatum = Dp_TavozasDatum.SelectedDate.Value;
+            int letszam = int.Parse(Tbx_Letszam.Text);
+
+            Foglalas foglalas = new Foglalas(szoba, ugyfel, erkezesDatum, tavozasDatum, letszam);
+            Adatforras.Foglalasok.Add(foglalas);
+
+            MessageBox.Show("Foglalás sikeresen mentve!");
+            Close();
         }
 
         private void Btn_Vissza_Click(object sender, RoutedEventArgs e)

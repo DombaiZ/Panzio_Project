@@ -8,30 +8,19 @@ namespace Panzio
 {
     public class Ugyfel
     {
-        string ugyfelID;
-        string ugyfelNev;
-        DateTime szulEv;
-        string email;
-        bool ugyfelVIP;
+        public string Azonosito { get; set; }
+        public string Nev { get; set; }
+        public DateTime SzuletesiDatum { get; set; }
+        public string Email { get; set; }
+        public bool Vip { get; set; }
 
-        public Ugyfel(string ugyfelID, string ugyfelNev, DateTime szulEv, string email, bool ugyfelVIP)
+        public Ugyfel(string nev, DateTime szuletesiDatum, string email, bool vip)
         {
-            this.UgyfelID = ugyfelID;
-            this.UgyfelNev = ugyfelNev;
-            this.SzulEv = szulEv;
-            this.Email = email;
-            this.UgyfelVIP = ugyfelVIP;
+            Nev = nev;
+            SzuletesiDatum = szuletesiDatum;
+            Email = email;
+            Vip = vip;
+            Azonosito = $"{nev}_{DateTime.Now.ToString("yyyyMMddHHmmss")}";
         }
-
-        public override string ToString()
-        {
-            return $"{ugyfelID};{ugyfelNev},{szulEv.Year},{szulEv.Month},{szulEv.Day},{email},{ugyfelVIP}\n";
-        }
-
-        public string UgyfelID { get => ugyfelID; set => ugyfelID = value; }
-        public string UgyfelNev { get => ugyfelNev; set => ugyfelNev = value; }
-        public DateTime SzulEv { get => szulEv; set => szulEv = value; }
-        public string Email { get => email; set => email = value; }
-        public bool UgyfelVIP { get => ugyfelVIP; set => ugyfelVIP = value; }
     }
 }

@@ -8,6 +8,6 @@
         Title="FoglalasokLista" Height="450" Width="800">
     <StackPanel>
         <Label Content="Ügyféladatok, Szobafoglalások megtekintése" FontSize="30" FontWeight="Black" HorizontalAlignment="Center"/>
-        <DataGrid Name="Dgr_adatok"/>
+        <DataGrid Name="Dgr_adatok" AutoGenerateColumns="True" />
     </StackPanel>
 </Window>

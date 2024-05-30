@@ -19,7 +19,7 @@ namespace Panzio
     /// </summary>
     public partial class UgyfelAdatok : Window
     {
-        public static List<Ugyfel> ugyfelek = new List<Ugyfel>();
+        
         public UgyfelAdatok()
         {
             InitializeComponent();
@@ -27,7 +27,15 @@ namespace Panzio
 
         private void Btn_Register_Click(object sender, RoutedEventArgs e)
         {
-            ugyfelek.Add(new Ugyfel(Tbx_UgyfelID.Text, Tbx_UgyfelNev.Text, DateTime.Parse(Dpr_szulEv.Text),Tbx_Email.Text, Cbx_VIP.IsChecked==true));
+            string nev = Tbx_UgyfelNev.Text;
+            DateTime szuletesiDatum = Dpr_szulEv.SelectedDate.Value;
+            string email = Tbx_Email.Text;
+            bool vip = Cbx_VIP.IsChecked.Value;
+
+            Ugyfel ugyfel = new Ugyfel(nev, szuletesiDatum, email, vip);
+            Adatforras.Ugyfelek.Add(ugyfel);
+
+            MessageBox.Show("Ügyfél sikeresen regisztrálva!");
             Close();
         }
 

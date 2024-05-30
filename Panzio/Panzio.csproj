@@ -55,10 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Adatforras.cs" />
     <Compile Include="Foglalas.cs" />
     <Compile Include="FoglalasokLista.xaml.cs">
       <DependentUpon>FoglalasokLista.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Szoba.cs" />
     <Compile Include="Ugyfel.cs" />
     <Compile Include="SzobaFoglalas.xaml.cs">
       <DependentUpon>SzobaFoglalas.xaml</DependentUpon>

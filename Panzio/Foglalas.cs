@@ -8,19 +8,27 @@ namespace Panzio
 {
     public class Foglalas
     {
-        int szobaszam;
-        int ferohely;
-        int ar;
+        public Szoba Szoba { get; set; }
+        public Ugyfel Ugyfel { get; set; }
+        public DateTime ErkezesDatum { get; set; }
+        public DateTime TavozasDatum { get; set; }
+        public int Letszam { get; set; }
+        public decimal Ar { get; set; }
+        public string Allapot { get; set; }
 
-        public Foglalas(int szobaszam, int ferohely, int ar)
+        public Foglalas(Szoba szoba, Ugyfel ugyfel, DateTime erkezesDatum, DateTime tavozasDatum, int letszam)
         {
-            this.Szobaszam = szobaszam;
-            this.Ferohely = ferohely;
-            this.Ar = ar;
+            Szoba = szoba;
+            Ugyfel = ugyfel;
+            ErkezesDatum = erkezesDatum;
+            TavozasDatum = tavozasDatum;
+            Letszam = letszam;
+            Allapot = "előjegyzett";
+            Ar = letszam * szoba.Ar * (tavozasDatum - erkezesDatum).Days;
+            if (ugyfel.Vip)
+            {
+                Ar *= 0.97m; // 3% kedvezmény
+            }
         }
-
-        public int Szobaszam { get => szobaszam; set => szobaszam = value; }
-        public int Ferohely { get => ferohely; set => ferohely = value; }
-        public int Ar { get => ar; set => ar = value; }
     }
 }

@@ -22,7 +22,7 @@ namespace Panzio
         public FoglalasokLista()
         {
             InitializeComponent();
-            Dgr_adatok.ItemsSource = UgyfelAdatok.ugyfelek;
+            Dgr_adatok.ItemsSource = Adatforras.Foglalasok;
         }
 
         

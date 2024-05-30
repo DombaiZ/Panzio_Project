@@ -15,14 +15,18 @@
                 <GradientStop Color="#FE399662" Offset="0.74"/>
             </LinearGradientBrush>
         </StackPanel.Background>
-        <Label Content="Szobaszám:" FontSize="20"/>
-        <ComboBox Name="Cbx_Szobaszam" Margin="10" FontSize="20"/>
-        <Label Content="Férőhelyek száma:" FontSize="20"/>
-        <ComboBox Name="Cbx_Ferohelyek" Margin="10" FontSize="20"/>
-        <Label Content="Ár:" FontSize="20"/>
-        <TextBox Name="Tbx_Ar" Margin="10" FontSize="20"/>
+        <Label Content="Szobaszám:" FontSize="16"/>
+        <ComboBox Name="Cbx_Szobaszam" FontSize="16"/>
+        <Label Content="Ügyfél:" FontSize="16"/>
+        <ComboBox Name="Cbx_Ugyfel" FontSize="16"/>
+        <Label Content="Érkezés dátuma:" FontSize="16"/>
+        <DatePicker Name="Dp_ErkezesDatum" FontSize="16"/>
+        <Label Content="Távozás dátuma:" FontSize="16"/>
+        <DatePicker Name="Dp_TavozasDatum" FontSize="16"/>
+        <Label Content="Létszám:" FontSize="16"/>
+        <TextBox Name="Tbx_Letszam" FontSize="16"/>
         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-            <Button Name="Btn_Mentes" Content="Foglalas" Width="150" Height="30" FontSize="20" Background="#32CD32" Margin="10"/>
+            <Button Name="Btn_Foglalas" Content="Foglalás" Click="Btn_Foglalas_Click" Width="150" Height="30" FontSize="20" Background="#32CD32" Margin="10"/>
             <Button Name="Btn_Vissza" Content="Vissza" Width="150" Height="30" FontSize="20" Background="#32CD32" Click="Btn_Vissza_Click"/>
         </StackPanel>
     </StackPanel>
